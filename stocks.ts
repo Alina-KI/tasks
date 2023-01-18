@@ -1,7 +1,7 @@
-let prices1 = [7, 1, 5, 3, 6, 4]
-let prices2 = [7, 6, 4, 3, 1]
+let prices1: number[] = [7, 1, 5, 3, 6, 4]
+let prices2: number[] = [7, 6, 4, 3, 1]
 
-function maxProfit(prices) {
+function maxProfit(prices: number[]) {
     const i = prices.slice(0, prices.length - 1).reduceRight((acc, price) => {
         return acc - price
     }, prices[prices.length - 1])

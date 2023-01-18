@@ -1,8 +1,8 @@
-let input1 = [[10, 12], [1, 3], [2, 6], [8, 10], [15, 18]]
-let input3 = [[1, 3], [2, 6], [6, 10], [15, 18]]
-let input2 = [[1, 4], [4, 5]]
+let input1: number[][] = [[10, 12], [1, 3], [2, 6], [8, 10], [15, 18]]
+let input3: number[][] = [[1, 3], [2, 6], [6, 10], [15, 18]]
+let input2: number[][] = [[1, 4], [4, 5]]
 
-function merge(intervals, i = 0) {
+function merge(intervals: number[][], i = 0) {
     if (i === 0) {
         intervals.sort((a, b) => a[0] - b[0])
     }

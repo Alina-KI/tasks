@@ -1,7 +1,7 @@
-let water1 = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]//6
-let water2 = [4, 2, 0, 3, 2, 5]//9
+let water1: number[] = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]//6
+let water2: number[] = [4, 2, 0, 3, 2, 5]//9
 
-function isRightBlock(landHeights, height, index) {
+function isRightBlock(landHeights: number[], height: number, index: number) {
     for (let i = index + 1; i < landHeights.length; i++) {
         if (landHeights[i] > height && landHeights[index] <= height) {
             return true
@@ -10,7 +10,7 @@ function isRightBlock(landHeights, height, index) {
     return false
 }
 
-function isLeftBlock(landHeights, height, index) {
+function isLeftBlock(landHeights: number[], height: number, index: number) {
     for (let i = index - 1; i >= 0; i--) {
         if (landHeights[i] > height && landHeights[index] <= height) {
             return true
@@ -19,7 +19,7 @@ function isLeftBlock(landHeights, height, index) {
     return false
 }
 
-function trap(landHeights) {
+function trap(landHeights: number[]) {
     const max = Math.max(...landHeights)
     let waterCount = 0
     for (let height = 0; height < max; height++) {
