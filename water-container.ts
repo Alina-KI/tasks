@@ -2,6 +2,7 @@ const container1: number[] = [1, 8, 6, 2, 5, 4, 8, 3, 7]//49
 const container2: number[] = [1, 1]//1
 const container3: number[] = [4, 3, 2, 1, 4]//16
 const container4: number[] = [1, 2, 1]//2
+const container5: number[] = [0, 0, 100]//0
 
 function volumeContainer(container: number[]) {
     let volume = 0
@@ -12,7 +13,6 @@ function volumeContainer(container: number[]) {
                 if (volume < min * i) {
                     volume = min * i
                 }
-                console.log(volume)
             }
         }
     }
@@ -23,3 +23,4 @@ console.log(volumeContainer(container1))
 console.log(volumeContainer(container2))
 console.log(volumeContainer(container3))
 console.log(volumeContainer(container4))
+console.log(volumeContainer(container5))
